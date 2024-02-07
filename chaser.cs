@@ -7,6 +7,7 @@ using UnityEngine;
 public class chaser : MonoBehaviour{
 
     public gameObject bossman;
+    public gameObject Dipshit;
     private int xsync;
     private int ysync;
     private int xgoes;
@@ -19,6 +20,8 @@ public class chaser : MonoBehaviour{
     }
 
     private void update(){
+        xpos.Add(Dipshit.transform.position.x);
+        ypos.Add(Dipshit.transform.position.y);
         
         xsync = xpos.Length - 120;
         xgoes = xpos[count];
